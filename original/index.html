@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<title>Café Aurora | Café de especialidad</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+<nav class="nav container">
+
+<h2 class="logo">Café Aurora</h2>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#">Inicio</a></li>
+<li><a href="#menu">Menú</a></li>
+<li><a href="#about">Nosotros</a></li>
+<li><a href="#contact">Contacto</a></li>
+</ul>
+
+<div class="hamburger" id="hamburger">☰</div>
+
+</nav>
+</header>
+
+<section class="hero">
+<div class="overlay"></div>
+
+<div class="hero-content container">
+<h1>Café de especialidad en Montevideo</h1>
+<p>Granos seleccionados · Tostado diario · Experiencia artesanal</p>
+<a class="btn" href="#menu">Ver menú</a>
+</div>
+</section>
+
+<section class="menu container" id="menu">
+<h2>Nuestros clásicos</h2>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1705952285570-113e76f63fb0?q=80&w=687&auto=format&fit=crop">
+<h3>Espresso</h3>
+<p>$120</p>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1593443320739-77f74939d0da?q=80&w=736&auto=format&fit=crop">
+<h3>Latte</h3>
+<p>$170</p>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1605046762635-8d7cf41f9a68?q=80&w=685&auto=format&fit=crop">
+<h3>Café helado</h3>
+<p>$190</p>
+</div>
+
+<div class="menu-card">
+<img src="https://plus.unsplash.com/premium_photo-1669687924558-386bff1a0469?q=80&w=688&auto=format&fit=crop">
+<h3>Irlandés</h3>
+<p>$290</p>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1632845407875-10b4d85e6bf8?q=80&w=1074&auto=format&fit=crop">
+<h3>Mocha</h3>
+<p>$260</p>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1737513916865-63c7fd3b67a7?q=80&w=1170&auto=format&fit=crop">
+<h3>Tostado de jamón y queso</h3>
+<p>$200</p>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1593855499713-52d4a946e4c3?q=80&w=687&auto=format&fit=crop">
+<h3>Carrot Cake</h3>
+<p>$250</p>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1606313564573-104197cf8f91?q=80&w=687&auto=format&fit=crop">
+<h3>Brownie</h3>
+<p>$220</p>
+</div>
+
+<div class="menu-card">
+<img src="https://images.unsplash.com/photo-1681329142517-6daaa56d3670?q=80&w=1170&auto=format&fit=crop">
+<h3>Lemon pie</h3>
+<p>$250</p>
+</div>
+
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container about-grid">
+
+<div>
+<h2>Nuestra historia</h2>
+<p>Desde 2008 tostamos café de origen único. Nuestro objetivo es que cada taza tenga identidad propia. 
+    Supimos ser el primer café de especialidad en Montevideo y hoy en día seguimos siendo el recoveco de la ciudad
+    donde hacerle culto al café y disfrutar de lo mejor que tiene para ofrecer.
+</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=700">
+
+</div>
+</section>
+
+<section class="testimonials container">
+<h2>Opiniones de fieles clientes</h2>
+
+<div class="test-grid">
+<div class="test-card">“El mejor café de Montevideo.”</div>
+<div class="test-card">“El ambiente está re copado.”</div>
+<div class="test-card">“El mocha es el mejor de toda la ciudad.”</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>¡Vení a conocernos!</h2>
+<p>Rincón 651 esq. Bartolomé Mitre</p>
+<p>08:00 - 17:00</p>
+<div id="map">
+<script>
+var customIcon = L.icon({
+ iconUrl:"https://img.icons8.com/?size=100&id=ysYOL6Mjsunr&format=png&color=000000",
+ iconSize:[50,50],
+ iconAnchor:[20,40],
+zIndexOffset: 1000
+});
+
+var map = L.map('map',{zoomControl:false})
+.setView([-34.905646, -56.202104],14);
+
+L.tileLayer(
+"https://api.maptiler.com/maps/basic/256/{z}/{x}/{y}.png?key=R6sfiWA7MoBXuJk2C2lz",
+{ attribution:"© Cafe Aurora" }
+).addTo(map);
+
+
+L.marker([-34.905646, -56.202104],{icon:customIcon}).addTo(map);
+</script>
+</div>
+</section>
+
+
+<footer id="contact">
+<p>© 2026 Café Aurora</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
