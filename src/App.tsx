@@ -46,17 +46,16 @@ export default function App() {
               </span>
               .
             </h1>
-            <p>
-              Hay días que empiezan mejor con un buen café.
-              <br className="desktop-break" /> Y lugares que te invitan a
-              quedarte.
+            <p className="">
+              Hay días que mejoran con un buen café.
+              <br className="desktop-break" /> Ya sabes dónde.
             </p>
             <div className="hero-actions">
               <a className="button" href="#menu">
-                Descubrí el menú <ArrowUpRight size={18} />
+                Descubrí el menú <ArrowUpRight size={16} />
               </a>
               <a className="text-link" href="#nosotros">
-                Conocé Aurora <ArrowRight size={17} />
+                Conocé Aurora <ArrowRight size={16} />
               </a>
             </div>
             <div className="hero-location">
@@ -74,11 +73,6 @@ export default function App() {
               fetchPriority="high"
             />
             <div className="photo-shade" />
-            <div className="round-stamp">
-              <span>BUEN CAFÉ</span>
-              <AuroraSun />
-              <span>BUENOS MOMENTOS</span>
-            </div>
             <div className="hero-photo-caption">
               <span>EL RITUAL DE CADA DÍA</span>
               <p>
@@ -87,13 +81,6 @@ export default function App() {
                 Extraordinariamente bueno.
               </p>
             </div>
-            <a
-              className="photo-arrow"
-              href="#menu"
-              aria-label="Explorar el menú"
-            >
-              <ArrowDown size={24} />
-            </a>
           </div>
         </section>
         <div className="values-strip">

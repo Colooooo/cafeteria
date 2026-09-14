@@ -139,8 +139,8 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 28px;
-  min-height: 51px;
-  padding: 16px 23px;
+  min-height: 40px;
+  padding: 5px 23px;
   background: var(--coffee);
   color: var(--paper);
   border: 1px solid var(--coffee);
@@ -903,10 +903,11 @@ h2 {
   }
   .hero-copy > p {
     font-size: 13px;
-    margin-top: 29px;
+    margin-top: 60px;
+    line-height: 1.5;
   }
   .hero-actions {
-    margin-top: 24px;
+    margin-top: 40px;
     gap: 24px;
   }
   .hero-location {
